@@ -20,6 +20,6 @@ int main(void)
 		a_to_f++;
 	}
 	putchar('\n');
-		
+
 	return (0);
 }
