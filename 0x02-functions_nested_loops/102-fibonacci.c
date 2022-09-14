@@ -6,7 +6,7 @@
 */
 
 int main(void)
-{
+{	
 	int counter;
 	int countto = 50;
 	long a = 1;
@@ -20,7 +20,7 @@ int main(void)
 	}
 	if (countto % 2 == 1)
 		printf("%li", a);
-
+	
 	printf("\n");
 
 	return (0);
