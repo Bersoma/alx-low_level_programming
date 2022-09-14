@@ -16,7 +16,7 @@ int main(void)
 	printf("1");
 
 	for (counter = 2; counter < 93; counter++) /* will still print */
-	{								
+	{
 		sum = a + b;
 		a = b;
 		b = sum;
@@ -38,7 +38,7 @@ int main(void)
 		a_tail = b_tail;
 		b_head = sum_head;
 		b_tail = sum_tail;
-	}								
+	}
 
 	printf("\n");
 
