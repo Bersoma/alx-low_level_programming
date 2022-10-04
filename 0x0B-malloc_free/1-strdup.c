@@ -14,7 +14,7 @@ char *_strdup(char *str)
 
 	if (str == NULL) /* validate str input */
 		return (NULL);
-		
+
 	while (*(str + i))
 		len++, i++;
 	len++; /* add null terminator to length */
