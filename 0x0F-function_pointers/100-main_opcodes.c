@@ -2,70 +2,39 @@
 #include <stdlib.h>
 
 /**
-* op_add - Return sum of a & b
-* @a: First int to add
-* @b: Second int to add
-* Return: Sum of a & b
+* main - a program that prints the opcodes of its own main function
+* @argc: number of command-line arguments
+* @argv: array of strings that contain each command-line argument
+* Return: returns 0 (Success)
 */
 
-int op_add(int a, int b)
+int main(int argc, char *argv[])
 {
-	return (a + b);
-}
+	int i, j;
+	char *alx;
 
-/**
-* op_sub - Return difference of a & b
-* @a: First int to sub
-* @b: Second itn to sub
-* Return: Difference of a & b
-*/
-
-int op_sub(int a, int b)
-{
-	return (a - b);
-}
-
-/**
-* op_mul - Return product of a & b
-* @a: First int to multiply
-* @b: Second int to multiply
-* Return: Product of a & b
-*/
-
-int op_mul(int a, int b)
-{
-	return (a * b);
-}
-
-/**
-* op_div - Return quotient of a & b
-* @a: Int to divide
-* @b: Int to divide by
-* Return: Quotient of a & b*/
-
-int op_div(int a, int b)
-{
-	if (b == 0)
+	if (argc != 2)
 	{
 		printf("Error\n");
-		exit(100);
+		exit(1);
 	}
-	return (a / b);
-}
 
-/**
-* op_mod - Return remainder of a & b
-* @a: Int to mod
-* @b: Int to mod by
-* Return: Remainder of a & b
-*/
-
-int op_mod(int a, int b)
-{
-	if (b == 0)
+	j = atoi(argv[1]);
+	if (j < 0)
 	{
 		printf("Error\n");
-		exit(100);
+		exit(2);
 	}
-	return (a % b);
+
+	alx = (char *) main;
+	for (i = 0; i < j; i++)
+	{
+		if (i == j - 1)
+		{
+			printf("%02hhx\n", alx[i]);
+			break;
+		}
+		printf("%02hhx ", alx[i]);
+	}
+	return (0);
 }
